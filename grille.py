@@ -22,7 +22,7 @@ class Grille:
 
     def definir_difficulte(self, difficulté):
         if difficulté == "FACILE":
-            return 8, 1  # taille, nb_mines    10 EN REALITE ET PAS 1
+            return 8, 10  # taille, nb_mines    10 EN REALITE ET PAS 1
         elif difficulté == "MOYEN":
             return 16, 40
         elif difficulté == "DIFFICILE":
@@ -65,25 +65,3 @@ class Grille:
     def afficher_grille(self):
         for row in self.cases:
             print(" ".join(str(c) for c in row))
-
-
-"""
-class grille:
-    
-    def __init__(self):
-        self.cases = [[Case() for _ in range(self.taille)] for _ in range(self.taille)]
-    
-    def creer_grille(self):
-        # Placer mines aléatoirement
-        mines = rd.sample(range(self.taille * self.taille), self.nb_mines)
-        for index in mines:
-            x, y = divmod(index, self.taille)
-            self.cases[x][y].contient_mine = True
-            
-    def victoire(self):
-        for row in self.cases:
-            for case in row:
-                if not case.contient_mine and not case.est_revelée:
-                    return False
-        return True
-"""
