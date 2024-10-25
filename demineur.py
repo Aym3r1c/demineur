@@ -132,14 +132,13 @@ class JeuDemineur(QtWidgets.QWidget):
             self.update_buttons()
 
     def reveler_case(self, x, y):
-        # if self.partie_terminée:
-        # return
         case = self.grille.cases[x][y]
-        case.reveler()
-        self.grille.cases_a_revelees -= 1
-        print(self.grille.cases_a_revelees)
         if case.marquee:
             return
+        if not case.marquee:
+            case.reveler()
+            self.grille.cases_a_revelees -= 1
+            print(self.grille.cases_a_revelees)
         if isinstance(case, CaseMine):
             self.partie_terminée = True
             # self.show_message("Vous avez perdu!")
