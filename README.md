@@ -3,10 +3,10 @@
 Après avoir cloner le projet sur votre ordinateur, ouvrez le fichier "demineur.py"
 ### Via la console
 Assurer vous de decommenter les deux dernières lignes dans if __name__ == "__main__": et de commenter les quatres lignes suivantes 
-    app = QtWidgets.QApplication(sys.argv)
-    demineur = JeuDemineur("ui")
-    demineur.show()
-    sys.exit(app.exec_())
+- app = QtWidgets.QApplication(sys.argv)
+- demineur = JeuDemineur("ui")
+- demineur.show()
+-sys.exit(app.exec_())
 Exécutez le script. Les input et la grille s'affichent dans la console
 ### Via l'interface graphique
 - Exécutez le script
