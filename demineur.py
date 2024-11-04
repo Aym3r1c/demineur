@@ -49,7 +49,7 @@ class JeuDemineur(QtWidgets.QWidget):
 
         '''
         self.setWindowTitle("Démineur")
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 400, 500)
 
         self.layout = QtWidgets.QVBoxLayout(self)
 
@@ -169,7 +169,7 @@ class JeuDemineur(QtWidgets.QWidget):
             row = []
             for y in range(self.grille.taille):
                 button = QtWidgets.QPushButton()
-                button.setFixedSize(40, 40)
+                button.setFixedSize(30, 30)
                 button.setStyleSheet("font-size: 18px;")
                 button.clicked.connect(lambda checked, x=x, y=y: self.clic_case(x, y))
 
