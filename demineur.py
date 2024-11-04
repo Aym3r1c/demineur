@@ -65,6 +65,9 @@ class JeuDemineur(QtWidgets.QWidget):
 
 
         self.gridLayout = QtWidgets.QGridLayout()
+        spacing = 2  # Définit l'espacement
+        self.gridLayout.setHorizontalSpacing(spacing)  # Espacement horizontal
+        self.gridLayout.setVerticalSpacing(spacing)
         self.layout.addLayout(self.gridLayout)
 
     def switch_mode_drapeau(self):
