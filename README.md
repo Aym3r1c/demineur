@@ -6,8 +6,9 @@ Assurer vous de decommenter les deux dernières lignes dans if __name__ == "__ma
 - app = QtWidgets.QApplication(sys.argv)
 - demineur = JeuDemineur("ui")
 - demineur.show()
--sys.exit(app.exec_())
-Exécutez le script. Les input et la grille s'affichent dans la console
+- sys.exit(app.exec_())
+
+Exécutez le script. Les inputs et la grille s'affichent dans la console
 ### Via l'interface graphique
 - Exécutez le script
 - choisissez la difficulté (tant que ce n'est pas fait ça ne sert à rien d'appuyer sur le bouton "activer mode drapeau")
