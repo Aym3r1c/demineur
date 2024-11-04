@@ -16,3 +16,5 @@ class CaseVide(Case):
         if self.revelee or self.marquee:
             return
         self.revelee = True
+        
+    
