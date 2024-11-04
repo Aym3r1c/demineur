@@ -19,6 +19,14 @@ class CaseMine(Case):
         #print("BOOM! Vous avez perdu.")
     
     def __str__(self):
+        '''
+        une case minée apparait sous la forme d'un asterique
+
+        Returns
+        -------
+        None.
+
+        '''
         if self.revelee:
             return '*'
         return super().__str__()
