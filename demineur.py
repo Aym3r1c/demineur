@@ -61,6 +61,8 @@ class JeuDemineur(QtWidgets.QWidget):
         self.modeDrapeauButton = QtWidgets.QPushButton("Activer le mode Drapeau")
         self.modeDrapeauButton.clicked.connect(self.switch_mode_drapeau)
         self.layout.addWidget(self.modeDrapeauButton)
+        self.modeDrapeauButton.setEnabled(False)
+
 
         self.gridLayout = QtWidgets.QGridLayout()
         self.layout.addLayout(self.gridLayout)
@@ -101,6 +103,8 @@ class JeuDemineur(QtWidgets.QWidget):
             if ok and choix:
                 self.difficulté = choix
                 self.demarrer()
+                self.modeDrapeauButton.setEnabled(True)
+
         else:
             print("Choisissez la difficulté : ")
             print("1. Facile (8x8, 10 mines)")
